@@ -1,4 +1,4 @@
-﻿const nav = document.querySelector('nav');
+const nav = document.querySelector('nav');
 const navLinks = Array.from(document.querySelectorAll('nav a'));
 const sections = Array.from(document.querySelectorAll('.section'));
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -111,7 +111,7 @@ topBtn.addEventListener('click', () => {
 updateOnScroll();
 
 const projectCards = Array.from(document.querySelectorAll('#projects .card'));
-const techCards = Array.from(document.querySelectorAll('#techwatch .tech-card'));
+const techCards = Array.from(document.querySelectorAll('#techwatch .timeline-content'));
 const expandableCards = [...projectCards, ...techCards];
 const projectModal = document.createElement('div');
 projectModal.className = 'project-modal';
@@ -119,6 +119,9 @@ projectModal.setAttribute('aria-hidden', 'true');
 projectModal.innerHTML = `
     <div class="project-modal__panel" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
         <button type="button" class="project-modal__close" aria-label="Fermer">&times;</button>
+        <div class="project-modal__image" aria-hidden="true">
+            <img src="" alt="Aperçu du projet">
+        </div>
         <h3 id="project-modal-title" class="project-modal__title"></h3>
         <p class="project-modal__text"></p>
     </div>
@@ -129,14 +132,28 @@ const modalTitle = projectModal.querySelector('.project-modal__title');
 const modalText = projectModal.querySelector('.project-modal__text');
 const modalCloseBtn = projectModal.querySelector('.project-modal__close');
 const modalPanel = projectModal.querySelector('.project-modal__panel');
+const modalImageWrapper = projectModal.querySelector('.project-modal__image');
+const modalImage = projectModal.querySelector('.project-modal__image img');
 let currentCard = null;
 
 function openProjectModal(card) {
     const title = card.querySelector('h3')?.textContent?.trim() || 'Projet';
     const text = card.querySelector('p')?.textContent?.trim() || '';
+    const image = card.querySelector('.card-preview img');
 
     modalTitle.textContent = title;
     modalText.textContent = text;
+
+    if (image?.src) {
+        modalImage.src = image.src;
+        modalImage.alt = image.alt || title;
+        modalImageWrapper.classList.add('is-visible');
+    } else {
+        modalImageWrapper.classList.remove('is-visible');
+        modalImage.src = '';
+        modalImage.alt = '';
+    }
+
     projectModal.classList.add('is-open');
     projectModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
@@ -195,3 +212,37 @@ window.addEventListener('keydown', (event) => {
         closeProjectModal();
     }
 });
+
+/* Gestion du défilement des projets */
+const projectsGrid = document.querySelector('.projects-grid');
+const scrollBtnLeft = document.querySelector('.scroll-btn--left');
+const scrollBtnRight = document.querySelector('.scroll-btn--right');
+
+if (projectsGrid && scrollBtnLeft && scrollBtnRight) {
+    const scrollAmount = 360; // Distance de défilement en pixels
+
+    function updateScrollButtons() {
+        const isAtStart = projectsGrid.scrollLeft <= 0;
+        const isAtEnd = projectsGrid.scrollLeft + projectsGrid.clientWidth >= projectsGrid.scrollWidth - 10;
+        
+        scrollBtnLeft.disabled = isAtStart;
+        scrollBtnRight.disabled = isAtEnd;
+    }
+
+    scrollBtnLeft.addEventListener('click', () => {
+        projectsGrid.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+
+    scrollBtnRight.addEventListener('click', () => {
+        projectsGrid.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+
+    projectsGrid.addEventListener('scroll', updateScrollButtons);
+    updateScrollButtons();
+}
