@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Yassine Yahia, étudiant en BTS SIO SLAM et développeur fullstack.">
+    <meta name="description" content="Portfolio de Yassine Yahia, étudiant en BTS SIO SLAM et développeur full-stack.">
     <title>Portfolio de Y.Y</title>
     <link rel="stylesheet" href="style.css">
     <script>document.documentElement.classList.add('js');</script>
@@ -12,79 +12,155 @@
 <body>
 <header class="hero" role="banner">
     <nav aria-label="Navigation principale">
-        <h2 class="logo">PORTFOLIO</h2>
+        <h2 class="logo">Portfolio</h2>
         <ul>
             <li><a href="#about">À propos</a></li>
+            <li><a href="#parcours">Parcours</a></li>
             <li><a href="#projects">Projets</a></li>
             <li><a href="#skills">Compétences</a></li>
             <li><a href="#techwatch">Veille</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact-title">Contact</a></li>
         </ul>
     </nav>
 
     <div class="hero-content">
-        <h1>Développeur Fullstack</h1>
-        <p>Conception d'applications modernes, performantes et pensées pour des besoins concrets.</p>
+        <h1>Yassine Yahia</h1>
+        <p>Etudiant en BTS SIO - Option SLAM</p>
         <a href="#projects" class="cta">Voir les projets</a>
     </div>
 </header>
 
 <main>
     <section id="about" class="section about" aria-labelledby="about-title">
-        <div class="container section-title">
-            <h2 id="about-title">À propos</h2>
-            <p>
-                Étudiant en 2e année de BTS SIO (option SLAM), je me spécialise dans le développement
-                d'applications et la conception de solutions numériques concrètes. Rigoureux 
-                et orienté résultats, je développe des projets utiles, performants et adaptés aux enjeux
-                actuels du numérique.
-            </p>
-        </div>
+    <div class="container section-title">
+        <h2 id="about-title">À propos de moi</h2>
+    </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <ul>
-                        <li><strong>Année de naissance :</strong> <span>20 juillet 2006</span></li>
-                        <li><strong>Téléphone :</strong> <a href="tel:+33623419984">06 23 41 99 84</a></li>
-                        <li><strong>Ville :</strong> <span>Nîmes, Gard, France</span></li>
-                    </ul>
+    <div class="container about-layout">
+        <div class="about-description">
+            <h3>Yassine YAHIA</h3>
+            <p>Étudiant en BTS SIO option SLAM, je suis spécialisé dans la création et la mise en place de sites web modernes, performants et centrés sur l'expérience utilisateur. J'ai choisi ce BTS car je ne savais pas vers quoi je pourrais me plaire</p>
+        </div>
+    </div>
+</section>
+
+<section id="parcours" class="section parcours" aria-labelledby="parcours-title">
+    <div class="container section-title">
+        <h2 id="parcours-title">Parcours</h2>
+    </div>
+
+    <div class="container parcours-grid">
+        <div class="timeline-card">
+            <h3>Formation</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2021 - 2024</span>
+                        <h4>Baccalauréat général 
+                            (Option Math et NSI)</h4>
+                        <p>Lycée Dhuoda</p> 
+                    </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <ul>
-                        <li><strong>Âge :</strong> <span>19 ans</span></li>
-                        <li><strong>Diplôme :</strong> <span>Baccalauréat général</span></li>
-                        <li><strong>Email :</strong> <a href="mailto:yassineyahia2006@gmail.com">yassineyahia2006@gmail.com</a></li>
-                    </ul>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2024 - 2026</span>
+                        <h4>BTS SIO (Option SLAM)</h4>
+                        <p>Lycée CCI Gard</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="timeline-card">
+            <h3>Expérience</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">mai 2025 - juin 2025</span>
+                        <h4>Stage - Association La planche à roulette</h4>
+                        <p>Développeur front-end : Mise en valeur de certaines fonctionnalités avec du HTML, CSS et JS.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">jan 2026 - février 2026</span>
+                        <h4>Stage - Cheappi Corp</h4>
+                        <p>Développeur full-stack.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section id="projects" class="section dark" aria-labelledby="projects-title">
-        <h2 id="projects-title">Projets</h2>
-        <div class="grid">
-            <article class="card">
-                <img src="Image/login_Y.png" alt="Capture du projet 1" loading="lazy">
-                <h3>Projet 1</h3>
-                <p>Présentation concise du projet, de ses objectifs et des technologies utilisées.</p>
+        <h2 id="projects-title">Mes Projets</h2>
+        <div class="projects-container">
+            <button class="scroll-btn scroll-btn--left" aria-label="Défiler vers la gauche" title="Défiler vers la gauche">❮</button>
+            <div class="grid projects-grid">
+            <article class="card project-card">
+                <div class="card-preview">
+                    <img src="Image/login_Y.png" alt="Portfolio project" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h3>Réseau Sociaux "Y"</h3>
+                    <p>Développement de la partie base de données avec SQL</p>
+                    <div class="card-tags">
+                        <span>SQL</span>
+                        <span>Backend</span>
+                        <span>Modélisation</span>
+                    </div>
+                </div>
             </article>
 
-            <article class="card">
-                <h3>Projet 2</h3>
-                <p>Présentation concise du projet, de ses objectifs et des technologies utilisées.</p>
+            <article class="card project-card">
+                <div class="card-preview card-gradient">
+                </div>
+                <div class="card-body">
+                    <h3>Mise en place d'une application mobile (AP4)</h3>
+                    <p>Application mobile en lien avec le site culturel (AP3)</p>
+                    <div class="card-tags">
+                        <span>Mobile Dev</span>
+                        <span>Sécurité</span>
+                        <span>Navigation</span>
+                    </div>
+                </div>
             </article>
 
-            <article class="card">
-                <h3>Projet 3</h3>
-                <p>Présentation concise du projet, de ses objectifs et des technologies utilisées.</p>
+            <article class="card project-card">
+                <div class="card-preview card-gradient">
+                    <img src="Image/AP3.PNG" alt="Portfolio project" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h3>Site culturel (AP3)</h3>
+                    <p>Page de Connexion en fonction du role attribué</p>
+                    <div class="card-tags">
+                        <span>Base de données</span>
+                        <span>CRUD</span>
+                        <span>API</span>
+                    </div>
+                </div>
             </article>
 
-            <article class="card">
-                <h3>Projet 4</h3>
-                <p>Présentation concise du projet, de ses objectifs et des technologies utilisées.</p>
+            <article class="card project-card">
+                <div class="card-preview card-gradient">
+                    <img src="Image/AP1&2.PNG" alt="Portfolio project" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h3>Site culturel (AP2 & AP1)</h3>
+                    <p>Site sur l'oenologie</p>
+                    <div class="card-tags">
+                        <span>Base de données</span>
+                        <span>CRUD</span>
+                        <span>API</span>
+                    </div>
+                </div>
             </article>
+
+            </div>
+            <button class="scroll-btn scroll-btn--right" aria-label="Défiler vers la droite" title="Défiler vers la droite">❯</button>
         </div>
     </section>
 
@@ -128,32 +204,119 @@
         </div>
     </section>
 
-    <section id="techwatch" class="section" aria-labelledby="techwatch-title">
-        <h2 id="techwatch-title">Veille Technologique</h2>
-        <div class="tech-grid">
-            <article class="tech-card">
-                <h3>Tendances du développement web</h3>
-                <p>Veille sur l'évolution des frameworks modernes, des standards du web et des bonnes pratiques front-end.</p>
-            </article>
-
-            <article class="tech-card">
-                <h3>Intelligence artificielle</h3>
-                <p>Analyse de l'impact de l'IA sur la création logicielle, l'automatisation et les outils d'aide au développement.</p>
-            </article>
-
-            <article class="tech-card">
-                <h3>Cybersécurité</h3>
-                <p>Suivi des menaces émergentes, de l'évolution des protocoles et des bonnes pratiques de protection.</p>
-            </article>
-
-            <article class="tech-card">
-                <h3>Technologies émergentes</h3>
-                <p>Exploration de nouvelles architectures, d'outils récents et de solutions innovantes en développement logiciel.</p>
-            </article>
+    <section id="certificate" class="section certificate-section" aria-labelledby="certificate-title">
+        <div class="container">
+            <div class="certificate-card">
+                <img src="../Image/YDlgEiGTKDBsHQQsAdYbPCNKsddnWefnsRsiKw9ZJDWHjmTR1BWi2EAFZHN7_090250_27032025.pdf.png" alt="Attestation SecNumacadémie" class="certificate-image" loading="lazy">
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="section dark" aria-labelledby="contact-title">
+    <section id="techwatch" class="section" aria-labelledby="techwatch-title">
+    <h2 id="techwatch-title">Veille Technologique</h2>
+
+    <div class="timeline">
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <span class="date">Fin 2024</span>
+            <h3>Démocratisation de l’IA dans les graphismes</h3>
+            <p>
+                À partir de fin 2024, l’intelligence artificielle prend une place importante
+                dans le domaine des jeux vidéo, notamment pour améliorer les performances graphiques.
+            </p>
+            <p>
+                Des technologies comme le DLSS de NVIDIA, le FSR d’AMD ou le XeSS d’Intel
+                utilisent l’upscaling afin d’afficher une image en haute résolution
+                à partir d’un rendu calculé en plus basse qualité.
+            </p>
+            <p>
+                Cette méthode permet d’obtenir une meilleure fluidité tout en limitant
+                la consommation de ressources matérielles.
+            </p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <span class="date">Début 2025</span>
+            <h3>Évolution du DLSS et génération d’images</h3>
+            <p>
+                NVIDIA continue de développer le DLSS avec l’ajout de technologies
+                de génération d’images basées sur l’intelligence artificielle.
+            </p>
+            <p>
+                Le système crée des images intermédiaires entre deux images calculées
+                par la carte graphique afin d’augmenter artificiellement le nombre d’images par seconde.
+            </p>
+            <p>
+                Cette technique améliore fortement la fluidité dans les jeux récents,
+                notamment avec le ray tracing activé.
+            </p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <span class="date">Mars 2025</span>
+            <h3>Amélioration du ray tracing grâce à l’IA</h3>
+            <p>
+                L’intelligence artificielle est également utilisée pour améliorer
+                le rendu du ray tracing en temps réel.
+            </p>
+            <p>
+                Des algorithmes de débruitage permettent de réduire le bruit visuel
+                généré par les calculs de lumière complexes.
+            </p>
+            <p>
+                Cela permet d’obtenir une image plus nette, plus stable
+                et plus réaliste sans perte importante de performances.
+            </p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <span class="date">Fin 2025</span>
+            <h3>Évolution des moteurs de jeu</h3>
+            <p>
+                Les moteurs de jeu modernes comme Unreal Engine 5 continuent d’évoluer
+                avec des technologies avancées comme Nanite et Lumen.
+            </p>
+            <p>
+                Nanite permet d’afficher des modèles 3D très détaillés,
+                tandis que Lumen améliore l’éclairage dynamique en temps réel.
+            </p>
+            <p>
+                Ces technologies sont parfois associées à des outils utilisant l’intelligence artificielle
+                afin d’optimiser les performances et le rendu visuel.
+            </p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <span class="date">2026</span>
+            <h3>Intégration de l’IA dans les consoles</h3>
+            <p>
+                Les consoles récentes commencent à intégrer des technologies similaires
+                à celles utilisées sur PC pour améliorer le rendu graphique.
+            </p>
+            <p>
+                L’intelligence artificielle permet d’optimiser l’image en temps réel,
+                d’améliorer la fluidité et de maintenir une bonne qualité visuelle
+                sans nécessiter une augmentation importante de la puissance matérielle.
+            </p>
+            <p>
+                Cette évolution montre que l’IA devient progressivement un élément central
+                dans le développement des jeux vidéo modernes.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+    <section id="contact-section" class="section dark" aria-labelledby="contact-title">
         <h2 id="contact-title">Contact</h2>
         <p>Je suis disponible pour échanger à propos d'un stage, d'une alternance ou d'un projet.</p>
         <a class="cta" href="mailto:yassineyahia2006@gmail.com">Me contacter</a>
@@ -163,6 +326,19 @@
 <footer>
     <p>&copy; 2026 Portfolio de Y.Y</p>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.5 });
+        timelineItems.forEach(item => observer.observe(item));
+    });
+</script>
 </body>
 </html>
 
