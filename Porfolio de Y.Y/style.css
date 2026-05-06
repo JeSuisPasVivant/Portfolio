@@ -721,6 +721,21 @@ button:focus-visible {
     filter: brightness(1.05);
 }
 
+.about-description .cta {
+    padding: 16px 36px;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: fit-content;
+    color: #ffffff;
+}
+
+.about-actions {
+    margin-top: 18px;
+    color: white;
+}
+
 .contact-grid {
     display: grid;
     place-items: center;
@@ -733,7 +748,6 @@ button:focus-visible {
     border: 1px solid rgba(255, 107, 53, 0.18);
     border-radius: 28px;
     padding: 36px;
-    box-shadow: var(--shadow-soft);
     display: grid;
     gap: 18px;
 }
