@@ -195,6 +195,9 @@ nav a[aria-current="true"]::after {
     animation: pulse 2s infinite;
 }
 
+.about-actions .cv-btn {
+    color: white !important;
+}
 .cta:hover {
     transform: translateY(-2px);
     filter: brightness(1.05);
